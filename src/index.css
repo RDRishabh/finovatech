@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* CSS Variables */
+:root {
+  --color-primary: #0097A7;
+  --color-primary-light: #33A9B8;
+  --color-primary-dark: #006B75;
+  --color-primary-50: rgba(0, 151, 167, 0.05);
+  --color-primary-100: rgba(0, 151, 167, 0.1);
+  --color-primary-200: rgba(0, 151, 167, 0.2);
+  --color-primary-300: rgba(0, 151, 167, 0.3);
+  --color-primary-500: rgba(0, 151, 167, 0.5);
+  --color-primary-800: rgba(0, 151, 167, 0.8);
+}
+
+/* Custom Classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-primary-100 {
+  background-color: var(--color-primary-100);
+}
+
+.bg-primary-200 {
+  background-color: var(--color-primary-200);
+}
+
+/* Custom Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-pattern-teal {
+  background-image: 
+    linear-gradient(var(--color-primary-100) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-primary-100) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-pattern-large {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
