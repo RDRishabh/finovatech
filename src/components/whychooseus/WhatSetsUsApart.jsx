@@ -1,6 +1,6 @@
 export default function WhatSetsUsApart() {
   return (
-    <section className="py-16 md:py-20 bg-white bg-grid-pattern">
+    <section id="what-sets-us-apart" className="py-16 md:py-20 bg-white bg-grid-pattern">
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         
         {/* Header */}
@@ -207,14 +207,14 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1554224154-26032fbc4d72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Value ROI"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
               </div>
             </div>
-            
+
             <div className="order-1 md:order-2">
               <div className="flex items-center mb-5 sm:mb-6">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">

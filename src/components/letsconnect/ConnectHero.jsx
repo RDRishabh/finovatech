@@ -1,6 +1,6 @@
 export default function ConnectHero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80dvh] flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -31,21 +31,25 @@ export default function ConnectHero() {
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="w-full sm:w-auto bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center group text-sm sm:text-base" aria-label="Schedule a consultation with our experts">
-            <span>Schedule Consultation</span>
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <a 
+            href="#contact" 
+            className="w-full sm:w-auto bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center group text-sm sm:text-base" 
+            aria-label="Scroll to contact section"
+          >
+            <span>Let's Connect</span>
+            <svg 
+              className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              aria-hidden="true"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            <span className="sr-only">Open scheduling form</span>
-          </button>
+            <span className="sr-only">Scroll to contact section</span>
+          </a>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden sm:block">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-          </div>
-        </div>
       </div>
 
       {/* Decorative Elements */}

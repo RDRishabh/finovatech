@@ -14,7 +14,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Cards */}
-  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12 lg:mb-16">
+        <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-12 lg:mb-16">
           {/* Phone Card */}
           <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
@@ -38,24 +38,10 @@ export default function Contact() {
             <p className="text-gray-600 text-sm sm:text-base mb-2">Send us your inquiries</p>
             <p className="text-primary font-semibold text-sm sm:text-base">info@finovatech.com</p>
           </div>
-
-          {/* Office Card */}
-          <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-              <svg className="w-7 h-7 sm:w-8 sm:h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Visit Us</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-2">Come to our office</p>
-            <p className="text-primary font-semibold text-sm sm:text-base">Noida, India</p>
-          </div>
         </div>
 
         {/* Contact Form Section */}
-  <div className="grid md:grid-cols-2 gap-10 md:gap-12">
-          
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12">
           {/* Left Side - Contact Info */}
           <div className="relative">
             <div className="absolute -inset-3 sm:-inset-4 bg-primary/5 rounded-2xl transform rotate-1 sm:rotate-2"></div>

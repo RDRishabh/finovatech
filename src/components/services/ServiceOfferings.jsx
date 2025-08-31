@@ -17,9 +17,9 @@ export default function ServiceOfferings() {
   <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16 items-stretch">
           
           {/* Strategic Finance & FP&A */}
-          <div className="relative group h-full">
+          <div id="strategic-finance" className="relative group h-full scroll-mt-24">
             <div className="pointer-events-none absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-auto md:h-[560px]">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-5 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,9 +40,9 @@ export default function ServiceOfferings() {
               capital efficiency, we build the financial frameworks that support sustainable growth.
             </p>
 
-            <div className="mt-auto pt-4">
-              <h4 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base">Key Capabilities:</h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-600">
+            <div className="">
+              <h4 className="font-semibold text-gray-900 mb-3 text-sm sm:text-base">Key Capabilities:</h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                 <li className="flex items-center">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                   Financial Modeling
@@ -77,9 +77,9 @@ export default function ServiceOfferings() {
           </div>
 
           {/* Management Reporting */}
-          <div className="relative group h-full">
+          <div id="management-reporting" className="relative group h-full scroll-mt-24">
             <div className="pointer-events-none absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-auto md:h-[560px]">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-5 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,9 +100,9 @@ export default function ServiceOfferings() {
               strategic and day-to-day decision-making.
             </p>
 
-            <div className="mt-auto pt-4">
-              <h4 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base">Key Capabilities:</h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-600">
+            <div className="">
+              <h4 className="font-semibold text-gray-900 mb-3 text-sm sm:text-base">Key Capabilities:</h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                 <li className="flex items-center">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                   Executive dashboards, MIS and board reporting packs
@@ -133,9 +133,9 @@ export default function ServiceOfferings() {
           </div>
 
           {/* Business Intelligence & Analytics */}
-          <div className="relative group h-full">
+          <div id="bi-analytics" className="relative group h-full scroll-mt-24">
             <div className="pointer-events-none absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-auto md:h-[560px]">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-5 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,9 +156,9 @@ export default function ServiceOfferings() {
               to the metrics that matter most to your business.
             </p>
 
-            <div className="mt-auto pt-4">
-              <h4 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base">Key Capabilities:</h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-600">
+            <div className="">
+              <h4 className="font-semibold text-gray-900 mb-3 text-sm sm:text-base">Key Capabilities:</h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                 <li className="flex items-center">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                   Dynamic Dashboards
@@ -185,9 +185,9 @@ export default function ServiceOfferings() {
           </div>
 
           {/* Private Equity Services */}
-          <div className="relative group h-full">
+          <div id="private-equity" className="relative group h-full scroll-mt-24">
             <div className="pointer-events-none absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-auto md:h-[560px]">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-5 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,9 +209,9 @@ export default function ServiceOfferings() {
               that empower better capital allocation and LP communication.
             </p>
 
-            <div className="mt-auto pt-4">
-              <h4 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-sm sm:text-base">Key Capabilities:</h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-600">
+            <div className="">
+              <h4 className="font-semibold text-gray-900 mb-3 text-sm sm:text-base">Key Capabilities:</h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                 <li className="flex items-center">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                   Portfolio Management

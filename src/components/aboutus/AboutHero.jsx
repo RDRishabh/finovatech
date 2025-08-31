@@ -1,7 +1,7 @@
 export default function AboutHero() {
   return (
     <section
-      className="relative w-full min-h-[100dvh] flex items-center justify-center text-center overflow-hidden"
+      className="relative w-full min-h-[80dvh] flex items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage: `
           linear-gradient(rgba(0, 151, 167, 0.9), rgba(0, 151, 167, 0.8)),

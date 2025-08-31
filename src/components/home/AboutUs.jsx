@@ -7,7 +7,7 @@ const AboutUs = () => {
   <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-14 lg:gap-16">
 
           {/* Image container with creative styling */}
-          <div className="lg:w-1/4 w-full flex justify-center lg:justify-start lg:h-auto">
+          <div className="lg:w-1/3 w-full flex justify-center lg:justify-start lg:h-auto">
             <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-none h-64 sm:h-80 lg:h-full">
               {/* Accent background */}
               <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl"></div>

@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[100dvh] flex items-center justify-center text-center overflow-hidden"
+  className="relative w-full min-h-[80dvh] flex items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage: `
           linear-gradient(rgba(0, 151, 167, 0.85), rgba(0, 151, 167, 0.75)),
@@ -25,17 +25,15 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl text-white px-6 pt-28 sm:pt-32 md:pt-0">
-        <div className="inline-block mb-8 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/15 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30 shadow-2xl">
-          <span className="text-white/90">Best Financial Consultant</span>
-        </div>
+  <div className="relative z-10 max-w-5xl text-white px-6 pt-24 sm:pt-24 md:pt-0">
         
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight tracking-tight">
+        
+  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 leading-tight tracking-tight">
           Your Partner in
           <span className="block mt-2 sm:mt-3 text-white">Business Intelligence</span>
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-white/95 max-w-3xl mx-auto leading-relaxed font-light">
+  <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed font-light">
           Expert financial consulting services to secure your future with tailored
           <span className="hidden sm:inline"> strategies and comprehensive</span>
           <span className="sm:hidden"> strategies &amp; comprehensive</span> solutions for your business growth.
@@ -61,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent"></div>
+  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/20 to-transparent"></div>
       
       {/* Additional overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-primary/10"></div>
