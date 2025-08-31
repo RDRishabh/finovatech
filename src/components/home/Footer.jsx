@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 relative overflow-hidden">
+    <footer className="bg-gray-900 text-gray-300 py-14 lg:py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="grid-pattern"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid gap-10 md:gap-8 mb-12 sm:grid-cols-2 md:grid-cols-4">
           
           {/* Logo + About */}
           <div className="md:col-span-2">
@@ -17,9 +17,9 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold text-white">FINOVATECH</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">FINOVATECH</h3>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+            <p className="text-gray-400 mb-6 max-w-md leading-relaxed text-sm md:text-base">
               Your trusted partner in strategic finance, FP&A excellence, automation, and portfolio management. 
               Unlocking financial clarity and performance for sustainable growth.
             </p>
@@ -46,11 +46,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
+            <h4 className="text-base md:text-lg font-semibold text-white mb-5 flex items-center">
               <div className="w-2 h-6 bg-primary rounded mr-3"></div>
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm md:text-base">
               <li><a href="#home" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
                 <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
+            <h4 className="text-base md:text-lg font-semibold text-white mb-5 flex items-center">
               <div className="w-2 h-6 bg-primary rounded mr-3"></div>
               Get In Touch
             </h4>
@@ -133,30 +133,33 @@ export default function Footer() {
 
         {/* Newsletter Section */}
         <div className="border-t border-gray-700 pt-8 mb-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-start md:items-center">
             <div>
-              <h4 className="text-xl font-semibold text-white mb-2">Stay Updated</h4>
-              <p className="text-gray-400">Subscribe to our newsletter for the latest financial insights and industry trends.</p>
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-2">Stay Updated</h4>
+              <p className="text-gray-400 text-sm md:text-base">Subscribe to our newsletter for the latest financial insights and industry trends.</p>
             </div>
-            <div className="flex space-x-3">
+            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e)=>e.preventDefault()} aria-label="Newsletter subscription">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors"
+                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm md:text-base"
+                required
+                aria-required="true"
+                aria-label="Email address"
               />
-              <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap">
+              <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap text-sm md:text-base" type="submit">
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="text-gray-500 text-sm">
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-gray-500 text-xs md:text-sm text-center md:text-left">
             © {new Date().getFullYear()} FINOVATECH. All rights reserved.
           </div>
-          <div className="flex space-x-6 text-sm">
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs md:text-sm">
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Disclosures</a>

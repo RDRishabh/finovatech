@@ -1,6 +1,6 @@
 export default function WhyChooseUsHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -10,44 +10,42 @@ export default function WhyChooseUsHero() {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-5 sm:px-6 max-w-6xl mx-auto">
         
         {/* Badge */}
-        <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8">
-          <span className="text-white text-sm font-medium">Our Advantage</span>
+        <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 sm:px-6 py-1.5 sm:py-2 mb-6 sm:mb-8">
+          <span className="text-white text-xs sm:text-sm font-medium tracking-wide">Our Advantage</span>
         </div>
 
         {/* Subtitle */}
-        <p className="text-white/80 text-lg mb-4">
+        <p className="text-white/80 text-sm sm:text-base md:text-lg mb-3 sm:mb-4 leading-relaxed">
           Incredible ways to increase your
         </p>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-          Why Choose
-          <br />
-          FINOVATECH
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
+          <span className="block">Why Choose</span>
+          <span className="block">FINOVATECH</span>
         </h1>
 
         {/* Description */}
-        <p className="text-white/90 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-          Because we bring hands-on expertise, strategic thinking, and innovative 
-          solutions to every financial challenge, delivering measurable results that 
-          drive sustainable growth.
+        <p className="text-white/90 text-sm sm:text-base md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-1">
+          Because we bring hands-on expertise, strategic thinking, and innovative solutions to every financial challenge, delivering measurable results that drive sustainable growth.
         </p>
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center group">
-            Our Differentiators
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center group text-sm sm:text-base" aria-label="View our differentiators">
+            <span>Our Differentiators</span>
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
+            <span className="sr-only">Scroll to differentiators section</span>
           </button>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden sm:block">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
           </div>
@@ -55,10 +53,10 @@ export default function WhyChooseUsHero() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 left-20 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
-      <div className="absolute top-1/3 right-20 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+      <div className="hidden md:block absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+      <div className="hidden md:block absolute bottom-20 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+      <div className="hidden md:block absolute top-1/2 left-20 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
+      <div className="hidden md:block absolute top-1/3 right-20 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
     </section>
   );
 }

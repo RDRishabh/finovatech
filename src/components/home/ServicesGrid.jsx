@@ -1,32 +1,32 @@
 // src/components/ServicesGrid.jsx
 export default function ServicesGrid() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 tracking-tight">
             What we <span className="text-primary">can offer you</span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive financial services designed to meet all your business and personal financial needs 
-            with expert guidance and innovative solutions.
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed px-1">
+            Comprehensive financial services designed to meet your business and personal financial needs with expert guidance and innovative solutions.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
           
           {/* Card 1 - Strategic Finance & FP&A */}
           <div className="relative group">
-            <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative h-64">
+            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+              <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Strategic Finance and FP&A"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
                 
@@ -41,10 +41,10 @@ export default function ServicesGrid() {
                 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     Strategic Finance & FP&A
                   </h3>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/90 text-xs sm:text-sm">
                     Turn financial data into strategic advantage.
                   </p>
                 </div>
@@ -54,13 +54,14 @@ export default function ServicesGrid() {
 
           {/* Card 2 - Management Reporting */}
           <div className="relative group">
-            <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative h-64">
+            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+              <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
                   alt="Management Reporting"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
                 
@@ -75,10 +76,10 @@ export default function ServicesGrid() {
                 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     Management Reporting
                   </h3>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/90 text-xs sm:text-sm">
                     Make data-driven decisions with confidence.
                   </p>
                 </div>
@@ -88,13 +89,14 @@ export default function ServicesGrid() {
 
           {/* Card 3 - Business Intelligence & Analytics */}
           <div className="relative group">
-            <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative h-64">
+            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+              <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Business Intelligence and Analytics"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
                 
@@ -109,10 +111,10 @@ export default function ServicesGrid() {
                 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     Business Intelligence & Analytics
                   </h3>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/90 text-xs sm:text-sm">
                     Transform data into decision-ready insights.
                   </p>
                 </div>
@@ -122,13 +124,14 @@ export default function ServicesGrid() {
 
           {/* Card 4 - Private Equity */}
           <div className="relative group">
-            <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="relative h-64">
+            <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+              <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Private Equity Portfolio Management"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
                 
@@ -144,10 +147,10 @@ export default function ServicesGrid() {
                 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     Private Equity – Reporting, Analysis & Portfolio Management
                   </h3>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/90 text-xs sm:text-sm">
                     Drive transparency and performance across your portfolio.
                   </p>
                 </div>

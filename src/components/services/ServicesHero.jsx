@@ -1,6 +1,6 @@
 export default function ServicesHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background with Analytics Dashboard */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -9,8 +9,8 @@ export default function ServicesHero() {
         }}
       ></div>
 
-      {/* Analytics Dashboard Overlay */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Analytics Dashboard Overlay (hidden on small screens for clarity) */}
+      <div className="absolute inset-0 opacity-20 hidden md:block">
         {/* Mock Dashboard Elements */}
         <div className="absolute top-20 left-10 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
           <div className="text-white text-xs mb-2">USERS: LAST 7 DAYS USING MEDIAN</div>
@@ -72,27 +72,27 @@ export default function ServicesHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-5 sm:px-6 max-w-6xl mx-auto">
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-          Comprehensive
-          <br />
-          Financial Services
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
+          <span className="block">Comprehensive</span>
+          <span className="block">Financial Services</span>
         </h1>
 
         {/* Description */}
-        <p className="text-white/90 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-white/90 text-sm sm:text-base md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-1">
           From strategic planning to operational excellence, we deliver high-impact 
           financial solutions tailored to support your business at every stage of growth.
         </p>
 
         {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center group">
-            Explore Services
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="w-full sm:w-auto bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center group text-sm sm:text-base">
+            <span>Explore Services</span>
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
+            <span className="sr-only">Navigate to services list</span>
           </button>
         </div>
       </div>
