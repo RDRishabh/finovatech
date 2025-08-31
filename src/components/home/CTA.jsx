@@ -9,29 +9,17 @@ export default function CTA() {
           
           {/* Main CTA container */}
           <div className="relative bg-primary text-white rounded-3xl p-8 lg:p-12 shadow-2xl">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              
+            <div className="flex flex-col items-center text-center gap-8">
               {/* Content */}
-              <div className="lg:w-2/3 text-center lg:text-left">
+              <div className="w-full">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
                   Ready to transform your financial operations?
                 </h2>
-                <p className="text-lg lg:text-xl text-white/90 leading-relaxed">
+                <p className="text-lg lg:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                   Partner with us to craft smart, custom strategies that lead to clear, measurable results and 
                   sustainable business growth.
                 </p>
               </div>
-
-              {/* CTA Button */}
-              <div className="lg:w-1/3 flex justify-center lg:justify-end">
-                <a
-                  href="#contact"
-                  className="inline-block px-8 py-4 bg-white text-primary font-semibold rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1 whitespace-nowrap"
-                >
-                  Schedule a Consultation
-                </a>
-              </div>
-
             </div>
           </div>
         </div>

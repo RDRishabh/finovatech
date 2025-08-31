@@ -41,13 +41,13 @@ export default function WhatSetsUsApart() {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-2"></div>
-              <div className="relative">
+            <div className="relative group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80"
                   alt="Big 4 Pedigree"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
@@ -55,13 +55,13 @@ export default function WhatSetsUsApart() {
 
           {/* Technology-Forward Approach */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform -rotate-2"></div>
-              <div className="relative">
+            <div className="relative order-2 md:order-1 group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Technology Dashboard"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
@@ -113,13 +113,13 @@ export default function WhatSetsUsApart() {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-2"></div>
-              <div className="relative">
+            <div className="relative group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
                   alt="Industry Analytics Dashboard"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
@@ -127,13 +127,13 @@ export default function WhatSetsUsApart() {
 
           {/* Results-Driven Methodology */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform -rotate-2"></div>
-              <div className="relative">
+            <div className="relative order-2 md:order-1 group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Results Methodology"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
@@ -185,13 +185,13 @@ export default function WhatSetsUsApart() {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-2"></div>
-              <div className="relative">
+            <div className="relative group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="White Glove Service"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>
@@ -199,13 +199,13 @@ export default function WhatSetsUsApart() {
 
           {/* Value-Driven ROI */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform -rotate-2"></div>
-              <div className="relative">
+            <div className="relative order-2 md:order-1 group">
+              <div className="absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1554224154-26032fbc4d72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                   alt="Value ROI"
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover"
                 />
               </div>
             </div>

@@ -6,10 +6,12 @@ import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import LetsConnect from "./pages/LetsConnect";
+import ScrollManager from "./components/ScrollManager";
 
 function App() {
   return (
     <Router>
+      <ScrollManager />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

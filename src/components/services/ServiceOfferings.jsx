@@ -15,10 +15,12 @@ export default function ServiceOfferings() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+  <div className="grid md:grid-cols-2 gap-12 mb-16 items-stretch">
           
           {/* Strategic Finance & FP&A */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="relative group h-full">
+            <div className="pointer-events-none absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +41,7 @@ export default function ServiceOfferings() {
               capital efficiency, we build the financial frameworks that support sustainable growth.
             </p>
 
-            <div>
+            <div className="mt-auto pt-4">
               <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -72,10 +74,13 @@ export default function ServiceOfferings() {
                 </li>
               </ul>
             </div>
+            </div>
           </div>
 
           {/* Management Reporting */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="relative group h-full">
+            <div className="pointer-events-none absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,7 +101,7 @@ export default function ServiceOfferings() {
               strategic and day-to-day decision-making.
             </p>
 
-            <div>
+            <div className="mt-auto pt-4">
               <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -125,10 +130,13 @@ export default function ServiceOfferings() {
                 </li>
               </ul>
             </div>
+            </div>
           </div>
 
           {/* Business Intelligence & Analytics */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="relative group h-full">
+            <div className="pointer-events-none absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +157,7 @@ export default function ServiceOfferings() {
               to the metrics that matter most to your business.
             </p>
 
-            <div>
+            <div className="mt-auto pt-4">
               <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -174,10 +182,13 @@ export default function ServiceOfferings() {
                 </li>
               </ul>
             </div>
+            </div>
           </div>
 
           {/* Private Equity Services */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="relative group h-full">
+            <div className="pointer-events-none absolute -bottom-4 -left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40"></div>
+            <div className="relative bg-gray-50 border border-gray-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-[560px]">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                 <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,7 +210,7 @@ export default function ServiceOfferings() {
               that empower better capital allocation and LP communication.
             </p>
 
-            <div>
+            <div className="mt-auto pt-4">
               <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -219,6 +230,7 @@ export default function ServiceOfferings() {
                   Benchmarking and performance tracking
                 </li>
               </ul>
+            </div>
             </div>
           </div>
 
