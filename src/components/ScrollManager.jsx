@@ -40,22 +40,42 @@ export default function ScrollManager() {
   useEffect(() => {
     const NAV_OFFSET = 80;
     const handleClick = (e) => {
-      const anchor = e.target.closest('a[href^="#"]');
+      const anchor = e.target.closest('a[href]');
       if (!anchor) return;
-      const hash = anchor.getAttribute('href');
-      if (hash.length <= 1) return; // ignore just '#'
-      const id = hash.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-        window.history.replaceState(null, '', hash); // update hash without jump
-        window.scrollTo({ top: y < 0 ? 0 : y, behavior: 'smooth' });
+      const href = anchor.getAttribute('href');
+
+      // Hash navigation within the same page (offset handling)
+      if (href && href.startsWith('#')) {
+        if (href.length <= 1) return; // ignore just '#'
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          const y = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+            window.history.replaceState(null, '', href); // update hash without jump
+          window.scrollTo({ top: y < 0 ? 0 : y, behavior: 'smooth' });
+        }
+        return;
+      }
+
+      // Same-route navigation (no hash) should also scroll to top smoothly
+      try {
+        const url = new URL(anchor.href, window.location.origin);
+        if (url.origin === window.location.origin &&
+            url.pathname === window.location.pathname &&
+            !url.hash && !url.search &&
+            window.scrollY > 10) {
+          // Let React Router prevent full reload; we only intercept for scroll
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (_) {
+        // ignore malformed URLs
       }
     };
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, []);
+  }, [location.pathname]);
 
   return null;
 }

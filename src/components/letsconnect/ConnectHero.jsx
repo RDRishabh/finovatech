@@ -36,7 +36,7 @@ export default function ConnectHero() {
             className="w-full sm:w-auto bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center group text-sm sm:text-base" 
             aria-label="Scroll to contact section"
           >
-            <span>Let's Connect</span>
+            <span>Get In Touch</span>
             <svg 
               className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
               fill="none" 

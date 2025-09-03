@@ -1,7 +1,7 @@
 export default function AboutHero() {
   return (
     <section
-      className="relative w-full min-h-[80dvh] flex items-center justify-center text-center overflow-hidden"
+      className="relative w-full min-h-[calc(100dvh-80px)] flex items-center justify-center text-center overflow-hidden pt-24"
       style={{
         backgroundImage: `
           linear-gradient(rgba(0, 151, 167, 0.9), rgba(0, 151, 167, 0.8)),
@@ -36,7 +36,7 @@ export default function AboutHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl text-white px-6 pt-28 md:pt-0">
+  <div className="relative z-10 max-w-5xl text-white px-6">
         <div className="inline-block mb-6 md:mb-8 px-6 md:px-8 py-2.5 md:py-3 bg-white/15 backdrop-blur-md rounded-full text-xs md:text-sm font-medium border border-white/30 shadow-2xl">
           <span className="text-white/90">Who We Are</span>
         </div>

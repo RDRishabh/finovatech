@@ -13,35 +13,8 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards */}
-        <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-12 lg:mb-16">
-          {/* Phone Card */}
-          <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-              <svg className="w-7 h-7 sm:w-8 sm:h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Call Us</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-2">Speak directly with our experts</p>
-            <p className="text-primary font-semibold text-sm sm:text-base">+91 98765 43210</p>
-          </div>
-
-          {/* Email Card */}
-          <div className="bg-white p-6 sm:p-7 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-              <svg className="w-7 h-7 sm:w-8 sm:h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">Email Us</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-2">Send us your inquiries</p>
-            <p className="text-primary font-semibold text-sm sm:text-base">info@finovatech.com</p>
-          </div>
-        </div>
-
-        {/* Contact Form Section */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12">
+        {/* Contact Form Section (cards removed, info merged to left panel) */}
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 mt-4 lg:mt-2">
           {/* Left Side - Contact Info */}
           <div className="relative">
             <div className="absolute -inset-3 sm:-inset-4 bg-primary/5 rounded-2xl transform rotate-1 sm:rotate-2"></div>
@@ -52,38 +25,30 @@ export default function Contact() {
               <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
                 We're here to help you achieve your financial goals. Whether you need consulting, automation, or strategic planning, our team is ready to assist.
               </p>
-              <div className="space-y-5 sm:space-y-6">
-                <div className="flex items-center space-x-4">
+              {/* Direct Contact Methods */}
+              <div className="space-y-5 sm:space-y-6 mb-8">
+                <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Response Time</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">Within 24 hours</p>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Phone</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm mb-1">Speak directly with our experts</p>
+                    <a href="tel:+919876543210" className="text-primary font-semibold text-sm sm:text-base hover:underline">+91 98765 43210</a>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Free Consultation</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">Initial assessment at no cost</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Quick Implementation</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">Fast project delivery</p>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Email</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm mb-1">Send us your inquiries</p>
+                    <a href="mailto:info@finovatech.com" className="text-primary font-semibold text-sm sm:text-base hover:underline">info@finovatech.com</a>
                   </div>
                 </div>
               </div>

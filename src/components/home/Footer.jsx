@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-14 lg:py-16 relative overflow-hidden">
@@ -51,36 +53,46 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm md:text-base">
-              <li><a href="#home" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
-                <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-                Home
-              </a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
-                <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-                About Us
-              </a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
-                <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-                Services
-              </a></li>
-              <li><a href="#why-choose-us" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
-                <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-                Why Choose Us
-              </a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
-                <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-                Contact
-              </a></li>
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                  <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                  <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                  <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/why-choose-us" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                  <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Why Choose Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-primary transition-colors duration-300 flex items-center group">
+                  <svg className="w-4 h-4 mr-2 text-gray-600 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

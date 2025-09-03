@@ -49,10 +49,12 @@ export default function ServicesIntro() {
               {/* Image */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Financial consulting and business analytics"
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2070&q=80"
+                  alt="Abstract upward view of modern financial district glass skyscraper symbolizing scalable finance transformation"
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
               </div>
             </div>

@@ -1,4 +1,6 @@
 // src/components/ServicesGrid.jsx
+import { Link } from 'react-router-dom';
+
 export default function ServicesGrid() {
   return (
     <section className="py-16 lg:py-20 bg-white">
@@ -18,9 +20,13 @@ export default function ServicesGrid() {
   <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
           
           {/* Card 1 - Strategic Finance & FP&A */}
-          <div className="relative group">
+          <Link
+            to="/services#strategic-finance"
+            className="relative group block focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl"
+            aria-label="Navigate to Strategic Finance & FP&A service section"
+          >
             <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1 cursor-pointer">
               <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
@@ -29,7 +35,6 @@ export default function ServicesGrid() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
-                
                 {/* Icon */}
                 <div className="absolute top-6 left-6">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
@@ -38,24 +43,23 @@ export default function ServicesGrid() {
                     </svg>
                   </div>
                 </div>
-                
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
-                    Strategic Finance & FP&A
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-sm">
-                    Turn financial data into strategic advantage.
-                  </p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Strategic Finance & FP&A</h3>
+                  <p className="text-white/90 text-xs sm:text-sm">Turn financial data into strategic advantage.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 2 - Management Reporting */}
-          <div className="relative group">
+          <Link
+            to="/services#management-reporting"
+            className="relative group block focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl"
+            aria-label="Navigate to Management Reporting service section"
+          >
             <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1 cursor-pointer">
               <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
@@ -64,7 +68,6 @@ export default function ServicesGrid() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
-                
                 {/* Icon */}
                 <div className="absolute top-6 left-6">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
@@ -73,33 +76,31 @@ export default function ServicesGrid() {
                     </svg>
                   </div>
                 </div>
-                
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
-                    Management Reporting
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-sm">
-                    Make data-driven decisions with confidence.
-                  </p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Management Reporting</h3>
+                  <p className="text-white/90 text-xs sm:text-sm">Make data-driven decisions with confidence.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 3 - Business Intelligence & Analytics */}
-          <div className="relative group">
+          <Link
+            to="/services#bi-analytics"
+            className="relative group block focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl"
+            aria-label="Navigate to Business Intelligence & Analytics service section"
+          >
             <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1 cursor-pointer">
               <div className="relative h-56 sm:h-64">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?auto=format&fit=crop&w=2070&q=80"
                   alt="Business Intelligence and Analytics"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
-                
                 {/* Icon */}
                 <div className="absolute top-6 left-6">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
@@ -108,24 +109,23 @@ export default function ServicesGrid() {
                     </svg>
                   </div>
                 </div>
-                
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
-                    Business Intelligence & Analytics
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-sm">
-                    Transform data into decision-ready insights.
-                  </p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Business Intelligence & Analytics</h3>
+                  <p className="text-white/90 text-xs sm:text-sm">Transform data into decision-ready insights.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Card 4 - Private Equity */}
-          <div className="relative group">
+          <Link
+            to="/services#private-equity"
+            className="relative group block focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl"
+            aria-label="Navigate to Private Equity service section"
+          >
             <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1 cursor-pointer">
               <div className="relative h-56 sm:h-64">
                 <img
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
@@ -134,7 +134,6 @@ export default function ServicesGrid() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50"></div>
-                
                 {/* Icon */}
                 <div className="absolute top-6 left-6">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
@@ -144,19 +143,14 @@ export default function ServicesGrid() {
                     </svg>
                   </div>
                 </div>
-                
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
-                    Private Equity – Reporting, Analysis & Portfolio Management
-                  </h3>
-                  <p className="text-white/90 text-xs sm:text-sm">
-                    Drive transparency and performance across your portfolio.
-                  </p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Private Equity – Reporting, Analysis & Portfolio Management</h3>
+                  <p className="text-white/90 text-xs sm:text-sm">Drive transparency and performance across your portfolio.</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
 
         </div>
       </div>
