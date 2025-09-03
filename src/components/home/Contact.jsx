@@ -1,5 +1,98 @@
+import { useState } from 'react';
+
 export default function Contact() {
-  return (
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({ state: 'idle', message: '' });
+  const [submitting, setSubmitting] = useState(false);
+
+  const endpoint = "https://script.google.com/macros/s/AKfycbzbIuwT3oAYQS_e3gDAK2fK6XnOOdgh0ODqdeigU3-_xPay4QKka5YE9gSiFk8NdiywgQ/exec";
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (submitting) return;
+    // Basic front-end validation
+    if (!formData.firstName || !formData.email || !formData.message) {
+      setStatus({ state: 'error', message: 'Please fill in required fields (First Name, Email, Message).' });
+      return;
+    }
+    if (!endpoint) {
+      console.warn('Missing VITE_CONTACT_ENDPOINT environment variable');
+      setStatus({ state: 'error', message: 'Configuration error: endpoint not set.' });
+      return;
+    }
+    try {
+      setSubmitting(true);
+      setStatus({ state: 'loading', message: 'Sending...' });
+      const started = performance.now();
+      const payload = { ...formData, timestamp: new Date().toISOString() };
+
+      // First attempt WITHOUT forcing application/json header to avoid CORS preflight on Apps Script
+      let res;
+      let attempt = 'text/plain';
+      try {
+        res = await fetch(endpoint, {
+          method: 'POST',
+          // No headers => browser sets text/plain;charset=UTF-8 (simple request, skips preflight)
+          body: JSON.stringify(payload)
+        });
+      } catch (networkErr) {
+        console.warn('[ContactForm] Primary fetch attempt failed (network). Retrying with form encoding.', { error: networkErr?.message });
+      }
+
+      // Fallback if first attempt failed outright
+      if (!res) {
+        attempt = 'form-urlencoded';
+        const formBody = new URLSearchParams();
+        Object.entries(payload).forEach(([k,v]) => formBody.append(k, v ?? ''));
+        try {
+          res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+            body: formBody.toString()
+          });
+        } catch (secondErr) {
+          console.error('[ContactForm] Both submission attempts failed', { error: secondErr?.message, endpoint });
+          throw secondErr;
+        }
+      }
+    if (!res.ok) {
+        let errorBody = '';
+        try { errorBody = await res.text(); } catch {}
+        console.error('[ContactForm] Submission failed', {
+          status: res.status,
+          statusText: res.statusText,
+          body: errorBody?.slice(0, 500),
+      attempt,
+      payload: { ...formData, messageLength: formData.message.length },
+          endpoint
+        });
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+      const text = await res.text(); // Apps Script often returns text
+      const duration = (performance.now() - started).toFixed(0);
+    console.info('[ContactForm] Submission success', { durationMs: duration, endpoint, attempt });
+      setStatus({ state: 'success', message: 'Message sent successfully. We will get back to you shortly.' });
+      setFormData({ firstName: '', lastName: '', email: '', phone: '', company: '', message: '' });
+    } catch (err) {
+      console.error('[ContactForm] Unhandled error during submission', { error: err?.message, stack: err?.stack, endpoint, payload: { ...formData, messageLength: formData.message.length } });
+      setStatus({ state: 'error', message: 'Failed to send. Please try again later.' });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (  
     <section id="contact" className="py-16 lg:py-20 bg-gray-50 relative bg-grid-pattern">
       <div className="max-w-7xl mx-auto px-6">
         
@@ -58,40 +151,58 @@ export default function Contact() {
           {/* Right Side - Contact Form */}
           <div className="relative">
             <div className="absolute -inset-3 sm:-inset-4 bg-primary/5 rounded-2xl transform -rotate-1 sm:-rotate-2"></div>
-            <form className="relative bg-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6" onSubmit={(e)=>e.preventDefault()} aria-label="Contact form">
+            <form className="relative bg-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6" onSubmit={handleSubmit} aria-label="Contact form">
+              {status.state !== 'idle' && (
+                <div
+                  className={`text-sm sm:text-base rounded-lg px-4 py-3 border ${
+                    status.state === 'success' ? 'bg-green-50 border-green-200 text-green-700' :
+                    status.state === 'error' ? 'bg-red-50 border-red-200 text-red-700' :
+                    'bg-primary/5 border-primary/20 text-primary'
+                  }`} aria-live="polite">
+                  {status.message}
+                </div>
+              )}
               <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="firstName">First Name</label>
-                  <input id="firstName" type="text" placeholder="John" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                  <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="firstName">First Name<span className="text-primary"> *</span></label>
+                  <input id="firstName" type="text" placeholder="John" value={formData.firstName} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="lastName">Last Name</label>
-                  <input id="lastName" type="text" placeholder="Doe" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                  <input id="lastName" type="text" placeholder="Doe" value={formData.lastName} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="email">Email Address</label>
-                <input id="email" type="email" placeholder="john.doe@company.com" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="email">Email Address<span className="text-primary"> *</span></label>
+                <input id="email" type="email" placeholder="john.doe@company.com" value={formData.email} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
               </div>
               <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="phone">Phone Number</label>
-                  <input id="phone" type="tel" placeholder="+91 98765 43210" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                  <input id="phone" type="tel" placeholder="+91 98765 43210" value={formData.phone} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="company">Company</label>
-                  <input id="company" type="text" placeholder="Your Company Name" className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                  <input id="company" type="text" placeholder="Your Company Name" value={formData.company} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="message">How can we help you?</label>
-                <textarea id="message" rows="4" placeholder="Tell us about your project or requirements..." className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors resize-none text-sm sm:text-base"></textarea>
+                <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="message">How can we help you?<span className="text-primary"> *</span></label>
+                <textarea id="message" rows="4" placeholder="Tell us about your project or requirements..." value={formData.message} onChange={handleChange} required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors resize-none text-sm sm:text-base"></textarea>
               </div>
-              <button type="submit" className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base flex items-center justify-center">
-                <span>Send Message</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
+              <button type="submit" disabled={submitting} className={`w-full bg-primary text-white py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed ${submitting ? 'bg-primary/80' : 'hover:bg-primary/90'}`}>
+                <span>{submitting ? 'Sending...' : 'Send Message'}</span>
+                {!submitting && (
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                )}
+                {submitting && (
+                  <svg className="w-5 h-5 ml-2 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" strokeWidth="4"></circle>
+                    <path className="opacity-75" strokeWidth="4" d="M4 12a8 8 0 018-8" strokeLinecap="round"></path>
+                  </svg>
+                )}
               </button>
             </form>
           </div>
