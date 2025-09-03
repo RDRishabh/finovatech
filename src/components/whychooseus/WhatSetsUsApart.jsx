@@ -44,8 +44,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80"
-                  alt="Big 4 Pedigree"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+                  alt="Senior consultants reviewing financial documents in a modern boardroom"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
@@ -59,8 +59,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Technology Dashboard"
+                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Real-time financial analytics dashboard with interactive data charts"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
@@ -118,8 +118,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80"
-                  alt="Industry Analytics Dashboard"
+                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2010&q=80"
+                  alt="Aerial city skyline representing diverse industry sectors"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
@@ -133,8 +133,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Results Methodology"
+                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Hands reviewing charts and KPI reports during strategy session"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
@@ -192,8 +192,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="White Glove Service"
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Advisor providing personalized guidance to a client"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />
@@ -207,8 +207,8 @@ export default function WhatSetsUsApart() {
               <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 w-full h-full bg-primary rounded-2xl shadow-lg shadow-primary/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Value ROI"
+                  src="https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  alt="Upward trending financial growth chart indicating strong ROI"
                   loading="lazy"
                   className="w-full h-52 sm:h-64 object-cover"
                 />

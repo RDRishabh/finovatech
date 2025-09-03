@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl h-full">
                 <div className="relative h-full">
                   <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    src="/white-glove.jpg"
                     alt="White-glove service and strategic mindset"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -102,7 +102,7 @@ export default function WhyChooseUs() {
                   <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl h-full">
                     <div className="relative h-full">
                       <img
-                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                        src="/deep-financial-expertise.jpg"
                         alt="Deep financial expertise"
                         className="w-full h-full object-cover"
                         loading="lazy"
