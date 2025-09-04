@@ -55,8 +55,20 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-sm fixed top-0 left-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900 hover:text-primary transition-colors">
+        {/* <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900 hover:text-primary transition-colors">
           FINOVATECH.
+        </Link> */}
+        <Link
+          to="/"
+          className="flex items-center text-2xl font-bold tracking-tight text-gray-900 hover:text-primary transition-colors"
+          aria-label="Finovatech Home"
+        >
+          <img
+            src="/finovatech_logo_01.png"
+            alt="Finovatech Logo"
+            className="h-8 w-auto md:h-9 lg:h-10 object-contain select-none"
+            draggable="false"
+          />
         </Link>
 
         {/* Desktop Menu */}
