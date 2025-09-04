@@ -1,6 +1,56 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Footer() {
+  // Newsletter subscription state
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error'
+  const [message, setMessage] = useState('');
+
+  // TODO: Replace with your deployed Google Apps Script Web App URL or API gateway that writes to Google Sheets
+  const GOOGLE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbx3VsY7qCuLJMlf4mmMYLr0CrrTULgfrfY8xQ0ZN2AJoZ50HpavAoPblimeO4d8TOsH/exec";
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    setStatus(null);
+    setMessage('');
+
+    const emailTrimmed = email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(emailTrimmed)) {
+      setStatus('error');
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+    if (!GOOGLE_SHEET_ENDPOINT) {
+      setStatus('error');
+      setMessage('Subscription service not configured.');
+      return;
+    }
+    try {
+      setLoading(true);
+      const res = await fetch(GOOGLE_SHEET_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+          email: emailTrimmed,
+          source: 'footer_newsletter',
+          timestamp: new Date().toISOString()
+        })
+      });
+      if (!res.ok) throw new Error('Network response was not ok');
+      // Optional: parse response if Apps Script returns JSON
+      setStatus('success');
+      setMessage('Subscribed successfully!');
+      setEmail('');
+    } catch (err) {
+      setStatus('error');
+      setMessage('Subscription failed. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <footer className="bg-gray-900 text-gray-300 py-14 lg:py-16 relative overflow-hidden">
       {/* Background Pattern */}
@@ -139,19 +189,43 @@ export default function Footer() {
               <h4 className="text-lg md:text-xl font-semibold text-white mb-2">Stay Updated</h4>
               <p className="text-gray-400 text-sm md:text-base">Subscribe to our newsletter for the latest financial insights and industry trends.</p>
             </div>
-            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e)=>e.preventDefault()} aria-label="Newsletter subscription">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm md:text-base"
-                required
-                aria-required="true"
-                aria-label="Email address"
-              />
-              <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap text-sm md:text-base" type="submit">
-                Subscribe
+            <form className="flex flex-col sm:flex-row gap-4" onSubmit={handleSubscribe} aria-label="Newsletter subscription" noValidate>
+              <div className="flex-1 relative">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className={`w-full bg-gray-800 border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 transition-colors text-sm md:text-base ${status === 'error' ? 'border-red-500 focus:ring-red-500' : 'border-gray-700 focus:ring-primary focus:border-primary'}`}
+                  required
+                  aria-required="true"
+                  aria-label="Email address"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
+                  disabled={loading}
+                />
+                {status === 'error' && message && (
+                  <p className="mt-2 text-xs text-red-400" role="alert">{message}</p>
+                )}
+              </div>
+              <button
+                className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap text-sm md:text-base disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
+                type="submit"
+                disabled={loading}
+                aria-live="polite"
+              >
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" strokeWidth="4"></circle>
+                      <path className="opacity-75" strokeWidth="4" d="M4 12a8 8 0 018-8" />
+                    </svg>
+                    Sending
+                  </span>
+                ) : 'Subscribe'}
               </button>
             </form>
+            {status === 'success' && message && (
+              <p className="mt-3 text-xs md:text-sm text-green-400" role="status">{message}</p>
+            )}
           </div>
         </div>
 
@@ -163,8 +237,6 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs md:text-sm">
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-primary transition-colors">Disclosures</a>
-            <a href="#" className="text-gray-500 hover:text-primary transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
