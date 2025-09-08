@@ -34,7 +34,7 @@ export default function WhatSetsUsApart() {
               </p>
               
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                With over 50 years of combined experience across Big 4 firms, our professionals 
+                With over 25 years of combined experience across Big 4 firms, our professionals 
                 have worked with Fortune 500 companies, private equity firms, and emerging 
                 growth companies. We bring institutional-grade expertise to every engagement.
               </p>

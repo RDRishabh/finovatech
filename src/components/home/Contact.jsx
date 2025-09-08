@@ -116,7 +116,7 @@ export default function Contact() {
                 Let's Start a <span className="text-primary">Conversation</span>
               </h3>
               <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
-                We're here to help you achieve your financial goals. Whether you need consulting, automation, or strategic planning, our team is ready to assist.
+                We’re here help you transform your financial processes and reporting."
               </p>
               {/* Direct Contact Methods */}
               <div className="space-y-5 sm:space-y-6 mb-8">
@@ -128,8 +128,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Phone</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm mb-1">Speak directly with our experts</p>
-                    <a href="tel:+919876543210" className="text-primary font-semibold text-sm sm:text-base hover:underline">+91 98765 43210</a>
+                    <div className="flex flex-col">
+                      <a href="tel:+919873383046" className="text-primary font-semibold text-sm sm:text-base hover:underline">+91 98733 83046</a>
+                      <a href="tel:+919873515717" className="text-primary font-semibold text-sm sm:text-base hover:underline mt-1">+91 98735 15717</a>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -179,7 +181,7 @@ export default function Contact() {
               <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="phone">Phone Number</label>
-                  <input id="phone" type="tel" placeholder="+91 98765 43210" value={formData.phone} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
+                  <input id="phone" type="tel" placeholder="e.g., +91 98733 83046" value={formData.phone} onChange={handleChange} className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm sm:text-base" />
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2 text-sm sm:text-base" htmlFor="company">Company</label>

@@ -113,7 +113,10 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone Number</p>
-                  <p className="text-gray-300">+91 98765 43210</p>
+                  <div className="flex flex-col">
+                    <a href="tel:+919873383046" className="text-gray-300 hover:text-primary">+91 98733 83046</a>
+                    <a href="tel:+919873515717" className="text-gray-300 hover:text-primary mt-1">+91 98735 15717</a>
+                  </div>
                 </div>
               </div>
               
@@ -132,28 +135,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="border-t border-gray-700 pt-8 mb-8">
-          <div className="grid md:grid-cols-2 gap-8 items-start md:items-center">
-            <div>
-              <h4 className="text-lg md:text-xl font-semibold text-white mb-2">Stay Updated</h4>
-              <p className="text-gray-400 text-sm md:text-base">Subscribe to our newsletter for the latest financial insights and industry trends.</p>
-            </div>
-            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e)=>e.preventDefault()} aria-label="Newsletter subscription">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-colors text-sm md:text-base"
-                required
-                aria-required="true"
-                aria-label="Email address"
-              />
-              <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap text-sm md:text-base" type="submit">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+  {/* Newsletter Section removed as requested */}
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

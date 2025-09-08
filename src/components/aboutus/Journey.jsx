@@ -13,7 +13,7 @@ export default function Journey() {
               </h2>
               
               <p className="text-gray-700 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed max-w-xl">
-                Founded by seasoned professionals from top-tier consulting firms, FINOVATECH emerged from a shared vision to bridge the gap between traditional financial advisory and modern business intelligence.
+                Founded by seasoned professionals from top-tier consulting firms, FINOVATECH emerged from a shared vision to bridge the gap between traditional financial reporting and modern business intelligence.
               </p>
               <p className="text-gray-700 text-sm sm:text-base mb-8 sm:mb-10 leading-relaxed max-w-xl">
                 Our founders recognized that businesses needed more than just financial reporting – they needed strategic partners who could transform data into actionable insights and drive meaningful business outcomes.
