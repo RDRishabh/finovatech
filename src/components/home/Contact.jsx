@@ -12,7 +12,7 @@ export default function Contact() {
   const [status, setStatus] = useState({ state: 'idle', message: '' });
   const [submitting, setSubmitting] = useState(false);
 
-  const endpoint = "https://script.google.com/macros/s/AKfycbzbIuwT3oAYQS_e3gDAK2fK6XnOOdgh0ODqdeigU3-_xPay4QKka5YE9gSiFk8NdiywgQ/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycbx3VsY7qCuLJMlf4mmMYLr0CrrTULgfrfY8xQ0ZN2AJoZ50HpavAoPblimeO4d8TOsH/exec";
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));

@@ -1,6 +1,56 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Footer() {
+  // Newsletter subscription state
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error'
+  const [message, setMessage] = useState('');
+
+  // TODO: Replace with your deployed Google Apps Script Web App URL or API gateway that writes to Google Sheets
+  const GOOGLE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbx3VsY7qCuLJMlf4mmMYLr0CrrTULgfrfY8xQ0ZN2AJoZ50HpavAoPblimeO4d8TOsH/exec";
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    setStatus(null);
+    setMessage('');
+
+    const emailTrimmed = email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(emailTrimmed)) {
+      setStatus('error');
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+    if (!GOOGLE_SHEET_ENDPOINT) {
+      setStatus('error');
+      setMessage('Subscription service not configured.');
+      return;
+    }
+    try {
+      setLoading(true);
+      const res = await fetch(GOOGLE_SHEET_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+          email: emailTrimmed,
+          source: 'footer_newsletter',
+          timestamp: new Date().toISOString()
+        })
+      });
+      if (!res.ok) throw new Error('Network response was not ok');
+      // Optional: parse response if Apps Script returns JSON
+      setStatus('success');
+      setMessage('Subscribed successfully!');
+      setEmail('');
+    } catch (err) {
+      setStatus('error');
+      setMessage('Subscription failed. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <footer className="bg-gray-900 text-gray-300 py-14 lg:py-16 relative overflow-hidden">
       {/* Background Pattern */}
@@ -145,8 +195,6 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs md:text-sm">
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-primary transition-colors">Disclosures</a>
-            <a href="#" className="text-gray-500 hover:text-primary transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
